@@ -1,89 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gravity Project: tryagain_1000101</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.dom.min.js"></script>
-  <script src="sketch.js" defer></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      background: black;
-    }
-    canvas {
-      display: block;
-      z-index: 1;
-    }
-    #title-container {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-      text-align: center;
-      padding: 12px 0;
-    }
-    #ui-container {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      z-index: 10;
-    }
-    #ui-prompt {
-      position: absolute;
-      bottom: 120px; /* Adjusted to avoid overlap */
-      width: 100%;
-      text-align: center;
-      z-index: 10;
-    }
-    button.reset-button, button.toggle-ui-button {
-      background-color: #2563eb !important; /* Tailwind's bg-blue-600 */
-      color: white !important;
-      font-family: 'Helvetica Neue', sans-serif !important;
-      font-size: 14px !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      display: block !important;
-      pointer-events: auto !important;
-      z-index: 200 !important;
-      padding: 4px 8px !important;
-      border-radius: 6px !important;
-      border: none !important;
-      box-shadow: 0 0 10px #2563eb, 0 0 20px rgba(37, 99, 235, 0.5) !important;
-    }
-    button.reset-button:hover, button.toggle-ui-button:hover {
-      background-color: #1e40af !important; /* Tailwind's bg-blue-700 */
-      box-shadow: 0 0 15px #1e40af, 0 0 25px rgba(30, 64, 175, 0.7) !important;
-    }
-    input[type="range"] {
-      background-color: #4b5563 !important; /* Tailwind's bg-gray-600 */
-      border-radius: 6px !important;
-      height: 8px !important;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
-    }
-    input[type="range"]:hover {
-      background-color: #6b7280 !important; /* Tailwind's bg-gray-500 */
-    }
-    input[type="checkbox"] {
-      background-color: #4b5563 !important; /* Tailwind's bg-gray-600 */
-      border-radius: 4px !important;
-      width: 16px !important;
-      height: 16px !important;
-      accent-color: #2563eb !important; /* Blue checkbox */
-    }
-  </style>
+    <title>Two body problem</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
 <body>
-  <div id="title-container" class="bg-gray-900/70 text-center py-4">
-    <h1 class="text-4xl font-bold text-indigo-400">Adib’s Gravity Project</h1>
-    <p class="text-gray-300 text-lg mt-2">A 2-body gravitational simulation using JavaScript and p5.js</p>
-  </div>
-  <div id="ui-prompt" class="text-sm text-gray-400">Use sliders below to adjust mass, distance, and gravity.</div>
-  <div id="ui-container" class="flex flex-row flex-wrap space-x-4 p-4 bg-gray-900/70 rounded-t-md shadow-md">
-    <!-- p5.js sliders, checkbox, and buttons will be injected here -->
-  </div>
+
+    <div id="title-container">
+      <h3>Two Body Problem </h3>
+      <h4>A 2-body gravitational simulation using JavaScript and p5.js</h4>
+      <h4>Team name: tryagain_1000101</h4>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

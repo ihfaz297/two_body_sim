@@ -1,0 +1,153 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+canvas {
+    display: block;
+}
+
+/* --- MODIFIED: Title Styles --- */
+#title-container {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none; /* Allows clicks to pass through to the canvas */
+    z-index: 10;
+}
+#title-container h3 {
+    margin: 0;
+    font-size: 2em; /* Increased font size */
+    font-weight: 700;
+    color: #00aaff; /* Matches UI accent color */
+}
+#title-container h4 {
+    margin: 4px 0 0 0;
+    font-weight: 300;
+    font-size: 1.2em; /* Increased font size */
+    color: #bbb;
+}
+
+/* Main UI Container */
+#ui-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    border-top: 1px solid #444;
+}
+
+/* Control Groups */
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    background: rgba(20, 20, 20, 0.7);
+    border-radius: 6px;
+    border: 1px solid #555;
+}
+
+.control-group p.title {
+    margin: 0 0 8px 0;
+    color: #00aaff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* Slider Wrappers */
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+}
+
+.slider-wrapper span {
+    flex-basis: 55px; /* Adjust as needed */
+    font-size: 13px;
+    color: #ccc;
+    text-align: left;
+}
+
+.slider-wrapper span.value {
+    flex-basis: 35px;
+    font-size: 13px;
+    color: #ffffff;
+    text-align: right;
+}
+
+/* Custom Sliders */
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    flex-grow: 1;
+    height: 5px;
+    background: #444;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+input[type=range]:hover {
+    background: #555;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #00aaff;
+    border-radius: 50%;
+    border: 2px solid #222;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #00aaff;
+    border-radius: 50%;
+    border: 2px solid #222;
+}
+
+/* Custom Buttons and Checkbox */
+.action-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.control-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0077cc;
+    border: 1px solid #00aaff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.control-button:hover {
+    background-color: #0055aa;
+}
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 14px;
+}
